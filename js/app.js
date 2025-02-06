@@ -12,12 +12,12 @@ function comprar() {
     let qtdIngressos = document.getElementById('qtd').value;
 
     if (tipoIngresso === 'pista') {
-        pista <= 0 || pista < qtdIngressos ? alert('Acabou os ingressos') : pista -= qtdIngressos;
+        pista < qtdIngressos ? alert('Sem ingressos suficientes') : pista -= qtdIngressos;
         
     } else if (tipoIngresso === 'superior') {
-        cadeiraSup <= 0 || cadeiraSup < qtdIngressos ? alert('Acabou os ingressos') : cadeiraSup -= qtdIngressos;
+        cadeiraSup < qtdIngressos ? alert('Sem ingressos suficientes') : cadeiraSup -= qtdIngressos;
     } else {
-        cadeiraInf <= 0 || cadeiraInf < qtdIngressos ? alert('Acabou os ingressos') : cadeiraInf -= qtdIngressos;
+        cadeiraInf < qtdIngressos ? alert('Sem ingressos suficientes') : cadeiraInf -= qtdIngressos;
     };
 
     document.getElementById('qtd-pista').innerHTML = pista;
